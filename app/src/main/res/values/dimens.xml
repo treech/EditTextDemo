@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="key_traveler_statistics_header_text_size">16sp</dimen>
+    <dimen name="key_traveler_statistics_header_drawable_padding">5dp</dimen>
+
+    <dimen name="key_traveler_statistics_middle_vertical_margin">10dp</dimen>
+    <dimen name="key_traveler_statistics_middle_horizontal_margin">8dp</dimen>
+    <dimen name="key_traveler_statistics_middle_description_text_size">14sp</dimen>
+    <dimen name="key_traveler_statistics_middle_description_text_padding">4dp</dimen>
+    <dimen name="key_traveler_statistics_middle_description_text_margin_top">5dp</dimen>
+    <dimen name="key_traveler_statistics_middle_description_text_margin_end">5dp</dimen>
+    <dimen name="key_traveler_statistics_middle_similarity_text_size">20sp</dimen>
+    <dimen name="key_traveler_statistics_middle_text_size">16sp</dimen>
+    <dimen name="key_traveler_statistics_middle_highlight_text_size">20sp</dimen>
+    <dimen name="key_traveler_statistics_middle_statistics_hint_text_size">14sp</dimen>
+    <dimen name="key_traveler_statistics_middle_statistics_text_size">20sp</dimen>
+    <dimen name="key_traveler_statistics_middle_statistics_margin_top">0dp</dimen>
+    <dimen name="key_traveler_statistics_middle_statistics_margin_start">8dp</dimen>
+    <dimen name="key_traveler_statistics_middle_alarm_list_text_size">14sp</dimen>
+    <dimen name="key_traveler_statistics_middle_auto_refresh_text_size">12sp</dimen>
+    <dimen name="key_traveler_statistics_middle_switch_margin_start">0dp</dimen>
+    <dimen name="key_traveler_statistics_middle_alarm_list_title_vertical_margin">10dp</dimen>
+    <dimen name="key_traveler_statistics_middle_alarm_list_title_horizontal_margin">8dp</dimen>
+    <dimen name="key_traveler_statistics_middle_card_view_margin">5dp</dimen>
+
+    <dimen name="key_traveler_statistics_middle_alarm_list_similarity_text_size">18sp</dimen>
+    <dimen name="key_traveler_statistics_middle_alarm_list_similarity_padding_vertical">8dp</dimen>
+    <dimen name="key_traveler_statistics_middle_alarm_list_similarity_divider_size">3dp</dimen>
+    <dimen name="key_traveler_statistics_middle_alarm_list_condition_size">20dp</dimen>
+    <dimen name="key_traveler_statistics_middle_alarm_list_condition_text_size">15sp</dimen>
+</resources>

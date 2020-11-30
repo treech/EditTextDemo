@@ -1,0 +1,67 @@
+<resources>
+
+    <style name="KeyTravelerStatisticsHeader">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+    </style>
+
+    <style name="AppTheme.MaterialButtonOverlay" parent="ThemeOverlay.AppCompat.Light">
+        <item name="colorAccent">@color/color_233DBD</item>
+    </style>
+
+<!--    <style name="MaterialTextButton.AlarmVideo">-->
+<!--        <item name="android:theme">@style/AppTheme.MaterialButtonOverlay</item>-->
+<!--        <item name="android:layout_width">0dp</item>-->
+<!--        <item name="android:layout_height">40dp</item>-->
+<!--        <item name="android:textColor">@color/color_233DBD</item>-->
+<!--        <item name="android:paddingLeft">0dp</item>-->
+<!--        <item name="android:paddingRight">0dp</item>-->
+<!--        <item name="android:paddingTop">0dp</item>-->
+<!--        <item name="android:paddingBottom">0dp</item>-->
+<!--        <item name="android:gravity">center</item>-->
+<!--        <item name="iconPadding">4dp</item>-->
+<!--        <item name="icon">@drawable/video_2</item>-->
+<!--        <item name="iconGravity">textStart</item>-->
+<!--        <item name="layout_constraintWidth_default">percent</item>-->
+<!--        <item name="layout_constraintWidth_percent">0.5</item>-->
+<!--    </style>-->
+
+    <style name="MaterialButton.DealState" parent="Widget.MaterialComponents.Button">
+        <item name="enforceTextAppearance">false</item>
+        <item name="android:theme">@style/AppTheme.MaterialButtonOverlay</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:gravity">center</item>
+        <item name="cornerRadius">4dp</item>
+        <item name="layout_constraintWidth_default">percent</item>
+        <item name="layout_constraintWidth_percent">0.446153846</item>
+    </style>
+
+    <style name="TextAppearance.AlarmInfo" parent="">
+        <item name="android:textSize">@dimen/key_traveler_statistics_middle_text_size</item>
+        <item name="autoSizeTextType">uniform</item>
+        <item name="autoSizeMinTextSize">12sp</item>
+        <item name="autoSizeMaxTextSize">@dimen/key_traveler_statistics_middle_text_size</item>
+        <item name="autoSizeStepGranularity">1sp</item>
+    </style>
+
+    <style name="TextAppearance.StatisticsHint" parent="">
+        <item name="android:textSize">
+            @dimen/key_traveler_statistics_middle_statistics_hint_text_size
+        </item>
+        <item name="autoSizeTextType">uniform</item>
+        <item name="autoSizeMinTextSize">10sp</item>
+        <item name="autoSizeMaxTextSize">
+            @dimen/key_traveler_statistics_middle_statistics_hint_text_size
+        </item>
+        <item name="autoSizeStepGranularity">1sp</item>
+    </style>
+
+</resources>

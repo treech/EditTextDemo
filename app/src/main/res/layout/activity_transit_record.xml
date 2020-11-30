@@ -1,0 +1,817 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true">
+
+    <ImageButton
+        android:id="@+id/iv_head_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:paddingLeft="18dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:scaleType="center"
+        app:layout_constraintBottom_toTopOf="@id/guide_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/transit_record"
+        android:textColor="@color/color_40424F"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/guide_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:layout_height="0dp"
+        android:layout_width="0dp"
+        android:id="@+id/mtrl_btn_save"
+        android:layout_marginEnd="20dp"
+        android:text="@string/save"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/guide_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.063" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.0795" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/color_EFF0F3"
+        android:padding="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guide_top">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_left"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="H,141:330"
+            app:layout_constraintEnd_toStartOf="@id/scroll_view"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.208064516">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_traveler_alarm_face"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center|start"
+                            android:textColor="@color/color_4F5470"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tv_traveler_deploy_face"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center|start"
+                            android:textColor="@color/color_4F5470"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/cl_left"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/similar_progresview"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <com.ygq.edittextdemo.widget.RoundImageView
+                                android:id="@+id/image_left_shadow"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                app:fill_color="@color/color_e7edff"
+                                app:layout_constraintBottom_toBottomOf="@id/image_left"
+                                app:layout_constraintCircle="@id/image_left"
+                                app:layout_constraintCircleAngle="135"
+                                app:layout_constraintCircleRadius="5dp"
+                                app:layout_constraintDimensionRatio="W,1:1"
+                                app:layout_constraintEnd_toEndOf="@id/image_left"
+                                app:layout_constraintStart_toStartOf="@id/image_left"
+                                app:layout_constraintTop_toTopOf="@id/image_left"
+                                app:layout_constraintWidth_default="percent"
+                                app:layout_constraintWidth_percent="0.8"
+                                app:radius="5dp" />
+
+                            <com.ygq.edittextdemo.widget.RoundImageView
+                                android:id="@+id/image_left"
+                                android:onClick="leftBack"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:scaleType="fitXY"
+                                app:fill_color="@color/color_dce3f7"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintDimensionRatio="W,1:1"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintWidth_default="percent"
+                                app:layout_constraintWidth_percent="0.8"
+                                app:radius="5dp"
+                                app:stroke_color="@color/color_DDDDDD"
+                                app:stroke_width="1dp" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <com.ygq.edittextdemo.widget.CircleProgressView
+                            android:id="@+id/similar_progresview"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            app:circle_width="4dp"
+                            app:end_color="@color/color_FB6262"
+                            app:head_color="@color/color_FB6262"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintDimensionRatio="1:1"
+                            app:layout_constraintLeft_toRightOf="@id/cl_left"
+                            app:layout_constraintRight_toLeftOf="@id/cl_right"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintWidth_percent="0.2"
+                            app:score_color="@color/color_FB6262"
+                            app:score_size="12sp" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/cl_right"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/similar_progresview"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <com.ygq.edittextdemo.widget.RoundImageView
+                                android:id="@+id/image_right_shadow"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                app:fill_color="@color/color_e7edff"
+                                app:layout_constraintBottom_toBottomOf="@id/image_right"
+                                app:layout_constraintCircle="@id/image_right"
+                                app:layout_constraintCircleAngle="135"
+                                app:layout_constraintCircleRadius="5dp"
+                                app:layout_constraintDimensionRatio="W,1:1"
+                                app:layout_constraintEnd_toEndOf="@id/image_right"
+                                app:layout_constraintStart_toStartOf="@id/image_right"
+                                app:layout_constraintTop_toTopOf="@id/image_right"
+                                app:layout_constraintWidth_default="percent"
+                                app:layout_constraintWidth_percent="0.8"
+                                app:radius="5dp" />
+
+                            <com.ygq.edittextdemo.widget.RoundImageView
+                                android:id="@+id/image_right"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:scaleType="fitXY"
+                                app:fill_color="@color/color_dce3f7"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintDimensionRatio="W,1:1"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintWidth_default="percent"
+                                app:layout_constraintWidth_percent="0.8"
+                                app:radius="5dp"
+                                app:stroke_color="@color/color_DDDDDD"
+                                app:stroke_width="1dp" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="3dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/record_times_for_today"
+                        android:textColor="@color/color_4F5470"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/record_times_for_seven_days"
+                        android:textColor="@color/color_4F5470"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/record_times_for_fifteen_days"
+                        android:textColor="@color/color_4F5470"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="3dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_record_today"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textColor="@color/color_FB6262"
+                        android:textSize="14sp"
+                        tools:text="1次" />
+
+                    <TextView
+                        android:id="@+id/tv_record_7days"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textColor="@color/color_FB6262"
+                        android:textSize="14sp"
+                        tools:text="2次" />
+
+                    <TextView
+                        android:id="@+id/tv_record_15days"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textColor="@color/color_FB6262"
+                        android:textSize="14sp"
+                        tools:text="32次" />
+                </LinearLayout>
+
+                <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                    android:id="@+id/swipe_refresh_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.netposa.commonsdk.core.widget.MultistateLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clipToPadding="false" />
+                    </com.netposa.commonsdk.core.widget.MultistateLayout>
+                </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <ScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cv_left"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_right"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_marginStart="8dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="0dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_title_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="26dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/color_233DBD"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toTopOf="@id/iv_scene"
+                        app:layout_constraintEnd_toStartOf="@id/tv_search"
+                        app:layout_constraintHorizontal_chainStyle="spread_inside"
+                        app:layout_constraintStart_toStartOf="@id/iv_scene"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0"
+                        app:layout_constraintVertical_chainStyle="packed"
+                        tools:text="2020-06-06 10:25:36  開閘PAPC  第一道防線" />
+
+                    <com.ygq.edittextdemo.widget.RoundCornerTextView
+                        android:id="@+id/tv_search"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:drawablePadding="4dp"
+                        android:gravity="center_vertical"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:text="搜索人脸目标"
+                        android:textColor="@color/black"
+                        android:textSize="9sp"
+                        app:layout_constraintBottom_toTopOf="@id/iv_scene"
+                        app:layout_constraintEnd_toEndOf="@id/cl_video_play_layout"
+                        app:layout_constraintStart_toEndOf="@id/tv_title_detail"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:rcTvRadius="5dp" />
+
+                    <com.ygq.edittextdemo.widget.RoundImageView
+                        android:id="@+id/iv_scene"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="10dp"
+                        android:scaleType="fitXY"
+                        app:layout_constraintBottom_toTopOf="@id/tv_alarm_handle_title"
+                        app:layout_constraintDimensionRatio="W,150:230"
+                        app:layout_constraintEnd_toStartOf="@id/cl_video_play_layout"
+                        app:layout_constraintHorizontal_chainStyle="spread"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_title_detail"
+                        app:layout_constraintVertical_bias="0"
+                        app:layout_constraintWidth_default="percent"
+                        app:layout_constraintWidth_percent="0.481171"
+                        app:radius="1dp" />
+
+                    <com.ygq.edittextdemo.widget.RoundCornerConstraintLayout
+                        android:id="@+id/cl_video_play_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@color/black"
+                        app:layout_constraintBottom_toBottomOf="@id/iv_scene"
+                        app:layout_constraintDimensionRatio="W,150:230"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/iv_scene"
+                        app:layout_constraintTop_toTopOf="@id/iv_scene"
+                        app:layout_constraintVertical_bias="0"
+                        app:layout_constraintWidth_default="percent"
+                        app:layout_constraintWidth_percent="0.481171"
+                        app:rcClRadius="1dp">
+
+                        <include layout="@layout/include_exo_player_view_transit_record" />
+
+                        <TextView
+                            android:id="@+id/tv_vod_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/white"
+                            android:textSize="32sp"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.2"
+                            tools:visibility="visible" />
+
+                        <RelativeLayout
+                            android:id="@+id/seekbar_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="1"
+                            tools:visibility="visible">
+
+                            <SeekBar
+                                android:id="@+id/sb_vod_time"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:max="100" />
+
+                            <ImageButton
+                                android:id="@+id/iv_controller"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/sb_vod_time"
+                                android:background="@null"
+                                android:padding="4dp" />
+
+                            <ImageButton
+                                android:id="@+id/iv_full_screen"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/sb_vod_time"
+                                android:layout_alignParentEnd="true"
+                                android:background="@null"
+                                android:padding="4dp" />
+                        </RelativeLayout>
+
+                    </com.ygq.edittextdemo.widget.RoundCornerConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/tv_alarm_handle_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="报警处理"
+                        android:textColor="@color/color_4F5470"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toTopOf="@id/et_pretreatment"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0"
+                        app:layout_constraintStart_toStartOf="@id/iv_scene"
+                        app:layout_constraintTop_toBottomOf="@id/iv_scene" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guide_line1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.095" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guide_line2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.472803347" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guide_line3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.607405858" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guide_line4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.962343096" />
+
+                    <TextView
+                        android:id="@+id/tv_pretreatment"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:gravity="center_vertical|end"
+                        android:text="预处理"
+                        android:textColor="@color/color_4F5470"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="@id/et_pretreatment"
+                        app:layout_constraintEnd_toStartOf="@id/guide_line1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/et_pretreatment" />
+
+                    <EditText
+                        android:id="@+id/et_pretreatment"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/traveler_transit_record_et_background"
+                        android:editable="false"
+                        android:gravity="start"
+                        android:imeOptions="actionDone|flagNoExtractUi"
+                        android:maxLines="1"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="7dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="7dp"
+                        android:textColor="@color/color_333333"
+                        android:textCursorDrawable="@null"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toTopOf="@id/et_remark"
+                        app:layout_constraintEnd_toStartOf="@id/guide_line2"
+                        app:layout_constraintStart_toEndOf="@id/guide_line1"
+                        app:layout_constraintTop_toBottomOf="@id/tv_alarm_handle_title"
+                        tools:text="测试预处理的文字" />
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:gravity="center_vertical|end"
+                        android:text="姓名"
+                        android:textColor="@color/color_4F5470"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="@id/et_pretreatment"
+                        app:layout_constraintEnd_toStartOf="@id/guide_line3"
+                        app:layout_constraintStart_toEndOf="@id/guide_line2"
+                        app:layout_constraintTop_toTopOf="@id/et_pretreatment" />
+
+                    <EditText
+                        android:id="@+id/et_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:background="@drawable/traveler_transit_record_et_background"
+                        android:gravity="start"
+                        android:imeOptions="actionDone|flagNoExtractUi"
+                        android:maxLines="1"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="7dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="7dp"
+                        android:textColor="@color/color_333333"
+                        android:textCursorDrawable="@null"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="@id/et_pretreatment"
+                        app:layout_constraintEnd_toEndOf="@id/guide_line4"
+                        app:layout_constraintStart_toEndOf="@id/guide_line3"
+                        app:layout_constraintTop_toTopOf="@id/et_pretreatment"
+                        tools:text="李伟" />
+
+                    <TextView
+                        android:id="@+id/tv_remark"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:gravity="center_vertical|end"
+                        android:text="备注"
+                        android:textColor="@color/color_4F5470"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="@id/et_remark"
+                        app:layout_constraintEnd_toStartOf="@id/guide_line1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/et_remark" />
+
+                    <EditText
+                        android:id="@+id/et_remark"
+                        android:layout_width="0dp"
+                        android:background="@drawable/traveler_transit_record_et_background"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="10dp"
+                        android:editable="false"
+                        android:gravity="start"
+                        android:imeOptions="actionDone|flagNoExtractUi"
+                        android:maxLines="1"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="7dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="7dp"
+                        android:textColor="@color/color_333333"
+                        android:textCursorDrawable="@null"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toTopOf="@id/et_handler"
+                        app:layout_constraintEnd_toStartOf="@id/guide_line2"
+                        app:layout_constraintStart_toEndOf="@id/guide_line1"
+                        app:layout_constraintTop_toBottomOf="@id/et_pretreatment"
+                        tools:text="测试预处理的文字" />
+
+                    <TextView
+                        android:id="@+id/tv_credential"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:gravity="center_vertical|end"
+                        android:text="证件"
+                        android:textColor="@color/color_4F5470"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="@id/et_credential"
+                        app:layout_constraintEnd_toStartOf="@id/guide_line3"
+                        app:layout_constraintStart_toEndOf="@id/guide_line2"
+                        app:layout_constraintTop_toTopOf="@id/et_credential" />
+
+                    <EditText
+                        android:id="@+id/et_credential"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:background="@drawable/traveler_transit_record_et_background"
+                        android:gravity="start"
+                        android:imeOptions="actionDone|flagNoExtractUi"
+                        android:maxLines="1"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="7dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="7dp"
+                        android:textColor="@color/color_333333"
+                        android:textCursorDrawable="@null"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="@id/et_remark"
+                        app:layout_constraintEnd_toStartOf="@id/guide_line4"
+                        app:layout_constraintStart_toEndOf="@id/guide_line3"
+                        app:layout_constraintTop_toTopOf="@id/et_remark"
+                        tools:text="测试预处理的文字" />
+
+                    <TextView
+                        android:id="@+id/tv_handler"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:gravity="center_vertical|end"
+                        android:text="处理人"
+                        android:textColor="@color/color_4F5470"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="@id/et_handler"
+                        app:layout_constraintEnd_toStartOf="@id/guide_line1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/et_handler" />
+
+                    <EditText
+                        android:id="@+id/et_handler"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/traveler_transit_record_et_background"
+                        android:gravity="start"
+                        android:imeOptions="actionDone|flagNoExtractUi"
+                        android:maxLines="1"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="7dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="7dp"
+                        android:textColor="@color/color_333333"
+                        android:textCursorDrawable="@null"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toTopOf="@id/et_handler_phoneNo"
+                        app:layout_constraintEnd_toStartOf="@id/guide_line2"
+                        app:layout_constraintStart_toEndOf="@id/guide_line1"
+                        app:layout_constraintTop_toBottomOf="@id/et_remark"
+                        tools:text="测试预处理的文字" />
+
+                    <TextView
+                        android:id="@+id/tv_handle_opinions"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:gravity="center_vertical|end"
+                        android:text="处理意见"
+                        android:textColor="@color/color_4F5470"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="@id/et_handler"
+                        app:layout_constraintEnd_toStartOf="@id/guide_line3"
+                        app:layout_constraintStart_toEndOf="@id/guide_line2"
+                        app:layout_constraintTop_toTopOf="@id/et_handler" />
+
+                    <EditText
+                        android:id="@+id/et_handle_opinions"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_gravity="end|center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:background="@drawable/traveler_transit_record_et_background"
+                        android:gravity="start"
+                        android:imeOptions="actionDone|flagNoExtractUi"
+                        android:maxLines="1"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="7dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="7dp"
+                        android:textColor="@color/color_333333"
+                        android:textCursorDrawable="@null"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="@id/et_handler_phoneNo"
+                        app:layout_constraintEnd_toStartOf="@id/guide_line4"
+                        app:layout_constraintStart_toEndOf="@id/guide_line3"
+                        app:layout_constraintTop_toTopOf="@id/et_handler"
+                        tools:text="测试预处理的文字" />
+
+                    <TextView
+                        android:id="@+id/tv_handler_phoneNo"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:gravity="center_vertical|end"
+                        android:text="处理人电话"
+                        android:textColor="@color/color_4F5470"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="@id/et_handler_phoneNo"
+                        app:layout_constraintEnd_toStartOf="@id/guide_line1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/et_handler_phoneNo" />
+
+                    <EditText
+                        android:id="@+id/et_handler_phoneNo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/traveler_transit_record_et_background"
+                        android:gravity="start"
+                        android:imeOptions="actionDone|flagNoExtractUi"
+                        android:maxLines="1"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="7dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="7dp"
+                        android:textColor="@color/color_333333"
+                        android:textCursorDrawable="@null"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toTopOf="@id/mtrl_btn_same_person"
+                        app:layout_constraintEnd_toStartOf="@id/guide_line2"
+                        app:layout_constraintStart_toEndOf="@id/guide_line1"
+                        app:layout_constraintTop_toBottomOf="@id/et_handler"
+                        tools:text="测试预处理的文字" />
+
+                    <Button
+                        android:id="@+id/mtrl_btn_same_person"
+                        style="@style/MaterialButton.DealState"
+                        android:layout_marginTop="10dp"
+                        android:backgroundTint="@color/common_mbt_selector"
+                        android:text="@string/same_person"
+                        android:textSize="@dimen/key_traveler_statistics_middle_text_size"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/mtrl_btn_different_person"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/et_handler_phoneNo"
+                        app:layout_constraintWidth_percent="0.125523013" />
+
+                    <Button
+                        android:id="@+id/mtrl_btn_different_person"
+                        style="@style/MaterialButton.DealState"
+                        android:layout_marginTop="@dimen/key_traveler_statistics_middle_vertical_margin"
+                        android:backgroundTint="@color/common_mbt_selector"
+                        android:text="@string/different_person"
+                        android:textSize="@dimen/key_traveler_statistics_middle_text_size"
+                        app:layout_constraintBaseline_toBaselineOf="@id/mtrl_btn_same_person"
+                        app:layout_constraintBottom_toBottomOf="@id/mtrl_btn_same_person"
+                        app:layout_constraintEnd_toStartOf="@id/mtrl_btn_not_found"
+                        app:layout_constraintStart_toEndOf="@id/mtrl_btn_same_person"
+                        app:layout_constraintTop_toTopOf="@id/mtrl_btn_same_person"
+                        app:layout_constraintWidth_percent="0.125523013" />
+
+                    <Button
+                        android:id="@+id/mtrl_btn_not_found"
+                        android:layout_marginTop="@dimen/key_traveler_statistics_middle_vertical_margin"
+                        android:backgroundTint="@color/common_mbt_selector"
+                        android:text="@string/not_found"
+                        android:textSize="@dimen/key_traveler_statistics_middle_text_size"
+                        app:layout_constraintBaseline_toBaselineOf="@id/mtrl_btn_same_person"
+                        app:layout_constraintBottom_toBottomOf="@id/mtrl_btn_same_person"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0"
+                        app:layout_constraintStart_toEndOf="@id/mtrl_btn_different_person"
+                        app:layout_constraintTop_toTopOf="@id/mtrl_btn_same_person"
+                        app:layout_constraintWidth_percent="0.125523013"
+                        android:layout_height="0dp"
+                        android:layout_width="0dp"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
